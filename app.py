@@ -3,7 +3,10 @@ from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://redrambles:meemoo@localhost/flasktodo'
+#dev
+#app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://redrambles:meemoo@localhost/flasktodo'
+#prod
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://qjpypinjfxhicu:d7092e1dc722bc9571e73683f4e867768296e954c88559f3fd49c3d778a650e7@ec2-174-129-209-212.compute-1.amazonaws.com:5432/d6441pv7926urp'
 db = SQLAlchemy(app)
 
 # Create database table 'Todo' and insert 'id' and 'content' columns
